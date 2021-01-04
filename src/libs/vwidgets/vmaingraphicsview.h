@@ -64,6 +64,7 @@
 #include <QRubberBand>
 #include <QColor>
 #include <Qt>
+#include <memory>
 
 /*!
  * This class adds ability to zoom QGraphicsView using mouse wheel. The point under cursor

@@ -7,6 +7,8 @@
 # File with common stuff for whole project
 message("Entering vwidgets.pro")
 include(../../../common.pri)
+include(vwidgets.pri)
+include(warnings.pri)
 
 QT += widgets xml printsupport
 
@@ -18,7 +20,7 @@ TEMPLATE = lib
 
 CONFIG += \
     staticlib \# Making static library
-    c++11 # We use C++11 standard
+    c++14 # We use C++14 standard
 
 # Use out-of-source builds (shadow builds)
 CONFIG -= debug_and_release debug_and_release_target
@@ -27,7 +29,6 @@ CONFIG -= debug_and_release debug_and_release_target
 # We need this information also in release builds. For this need define QT_MESSAGELOGCONTEXT.
 DEFINES += QT_MESSAGELOGCONTEXT
 
-include(vwidgets.pri)
 
 # This is static library so no need in "make install"
 
@@ -42,8 +43,6 @@ OBJECTS_DIR = obj
 
 # Set using ccache. Function enable_ccache() defined in common.pri.
 $$enable_ccache()
-
-include(warnings.pri)
 
 CONFIG(release, debug|release){
     # Release mode

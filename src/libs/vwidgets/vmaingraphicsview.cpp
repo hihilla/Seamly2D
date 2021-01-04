@@ -57,6 +57,7 @@
 #include <QFlags>
 #include <QGraphicsItem>
 #include <QGraphicsScene>
+#include <QGuiApplication>
 #include <QLineF>
 #include <QList>
 #include <QMessageLogger>
